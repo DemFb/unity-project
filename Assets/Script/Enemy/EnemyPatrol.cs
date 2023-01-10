@@ -8,7 +8,7 @@ public class EnemyPatrol : MonoBehaviour
     public Transform target;
     private int _destPoint = 0;
     
-    void Start() 
+    void Start()
     {
         target = waypoints[0];
     }
