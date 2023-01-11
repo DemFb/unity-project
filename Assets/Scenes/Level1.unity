@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.50433165, g: 0.8730046, b: 0.90913475, a: 1}
+  m_IndirectSpecularColor: {r: 0.50433147, g: 0.8730046, b: 0.90913475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3439,7 +3439,7 @@ Transform:
   m_Children:
   - {fileID: 405462021}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -5013,6 +5013,18 @@ PrefabInstance:
     - target: {fileID: 7851893891244171416, guid: 94b419045a1d946c7938cb99970c6d4e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851893891244171492, guid: 94b419045a1d946c7938cb99970c6d4e, type: 3}
+      propertyPath: jumpForce
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851893891244171493, guid: 94b419045a1d946c7938cb99970c6d4e, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851893891244171493, guid: 94b419045a1d946c7938cb99970c6d4e, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7851893891244171494, guid: 94b419045a1d946c7938cb99970c6d4e, type: 3}
       propertyPath: m_RootOrder
