@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
@@ -25,7 +26,8 @@ public class EnemyPatrol : MonoBehaviour
             target = waypoints[_destPoint];
             graphics.flipX = !graphics.flipX;
         }
-        
     }
+
+
 }
 
