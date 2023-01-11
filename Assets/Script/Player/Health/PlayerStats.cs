@@ -34,6 +34,8 @@ public class PlayerStats : MonoBehaviour
 
     public float invicibilityFlashDelay = 0.15f;
 
+    public float invicibilityTimeAfterHit = 3f;
+
     public SpriteRenderer playerGraphics;
 
     public void Heal(float health)
@@ -68,7 +70,7 @@ public class PlayerStats : MonoBehaviour
 
     public IEnumerator HandleInvicibilityDelay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(invicibilityTimeAfterHit);
         isInvisible = false;
     }
 
