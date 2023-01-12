@@ -7,8 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public static bool isJumping;
     private bool isCrouch;
-    private bool isGrounded;
-    private bool isTesting;
+    private bool isGrounded; 
 
     public Transform groundCheck;
     public float groundCheckRadius;
