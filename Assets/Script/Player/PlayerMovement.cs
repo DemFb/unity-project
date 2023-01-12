@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
-    private bool isJumping;
+    public static bool isJumping;
     private bool isGrounded;
 
     public Transform groundCheck;
