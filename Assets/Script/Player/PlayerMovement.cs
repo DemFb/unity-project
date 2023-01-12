@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
 
     public static bool isJumping;
-    private bool isGrounded;
+    private bool isCrouch;
+    private bool isGrounded; 
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -21,15 +22,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {  
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            isJumping = true;
-        }
-
+        
         Flip(rb.velocity.x);
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
+        
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            isJumping = true;
+            animator.SetBool("isJumping", true);
+        }
+
+        if (Input.GetButtonDown("Crouch") && isGrounded)
+        {
+            isCrouch = true;
+            animator.SetBool("isCrouching", true);
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            isCrouch = false;
+            animator.SetBool("isCrouching", false);
+        }
+        
+
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     void FixedUpdate()
@@ -46,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
-        if(isJumping == true)
+        if(isJumping)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
             isJumping = false;
