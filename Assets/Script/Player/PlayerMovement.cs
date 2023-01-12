@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,13 +14,27 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
+    public static PlayerMovement instance;
 
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
+
+  
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance de Player Movement dans la scène");
+        }
+
+        instance = this;
+    }
 
     void Update()
     {  
