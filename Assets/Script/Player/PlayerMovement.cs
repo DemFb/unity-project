@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
-    private bool isJump;
+    public static bool isJumping;
     private bool isCrouch;
     private bool isGrounded;
     private bool isTesting;
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            isJump = true;
+            isJumping = true;
             animator.SetBool("isJumping", true);
         }
 
@@ -64,10 +64,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
-        if(isJump)
+        if(isJumping)
         {
             rb.AddForce(new Vector2(0f, jumpForce));
-            isJump = false;
+            isJumping = false;
         }
     }
 
