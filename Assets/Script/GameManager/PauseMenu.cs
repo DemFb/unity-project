@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = true;
         if (Input.GetButtonDown("Jump"))
         {
+            //
             PlayerMovement.isJumping = false;
         }
     }
