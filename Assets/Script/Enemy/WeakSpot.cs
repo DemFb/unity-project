@@ -11,7 +11,7 @@ public class WeakSpot : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            Destroy(objectToDestroy);
+          //  Destroy(objectToDestroy);
         }
     }
 }
