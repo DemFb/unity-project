@@ -12,15 +12,15 @@ public class EnemyPatrol : MonoBehaviour
     public Animator animator;
 
 
-    /*private void Awake()
+    private void Awake()
     {
         if (instance != null)
         {
-            Debug.Log("Il y a plus d'une instance de Player Movement dans la scène");
+            Debug.Log("Il y a plus d'une instance de Enemy patrol dans la scène");
         }
 
         instance = this;
-    }*/
+    }
 
     void Start() 
     {
