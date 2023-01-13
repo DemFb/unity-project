@@ -6,6 +6,8 @@ public class PlayerStats : MonoBehaviour
     public delegate void OnHealthChangedDelegate();
     public OnHealthChangedDelegate onHealthChangedCallback;
 
+    public AudioClip hitSound;
+
     #region Sigleton
     private static PlayerStats instance;
     public static PlayerStats Instance
@@ -48,6 +50,8 @@ public class PlayerStats : MonoBehaviour
     {
         if (!isInvisible)
         {
+
+            AudioManager.instance.PlayClipAt(hitSound, transform.position);
             health -= dmg;
             ClampHealth();
             isInvisible = true;

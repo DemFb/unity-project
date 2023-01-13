@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
 
+    public AudioClip sound;
+
     void Update()
     {  
         
@@ -30,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            AudioManager.instance.PlayClipAt(sound, transform.position);
             isJumping = true;
             animator.SetBool("isJumping", true);
         }

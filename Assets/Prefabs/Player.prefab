@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
-  jumpForce: 300
+  jumpForce: 900
   groundCheck: {fileID: 7851893891212275935}
   groundCheckRadius: 0.4
   collisionLayers:
@@ -202,10 +202,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 2
   m_SleepingMode: 1
@@ -291,9 +291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b64c0b1dccc64d91eee52d85267bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 12e0edd4f20554b5fadbc56084953a11, type: 3}
   health: 3
   maxHealth: 3
-  maxTotalHealth: 30
+  maxTotalHealth: 9
   isInvisible: 0
   invicibilityFlashDelay: 0.15
-  playerGraphics: {fileID: 0}
+  invicibilityTimeAfterHit: 3
+  playerGraphics: {fileID: 7851893891244171495}
