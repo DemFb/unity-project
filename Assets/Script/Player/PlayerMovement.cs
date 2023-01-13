@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 5), rb.velocity.y);
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 2), rb.velocity.y);
         }
 
         if(isJumping)
