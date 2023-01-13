@@ -6,6 +6,7 @@ public class DeathZone : MonoBehaviour
 
     private Transform playerSpawn;
     private Animator fadeSystem;
+    public float dmg;
 
     private void Awake()
     {
@@ -17,7 +18,9 @@ public class DeathZone : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            PlayerStats.Instance.TakeDamage(dmg);
             StartCoroutine(ReplacePlayer(collision));
+            
         }
     }
 

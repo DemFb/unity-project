@@ -50,10 +50,26 @@ public class PlayerStats : MonoBehaviour
         {
             health -= dmg;
             ClampHealth();
+
+            if (health <= 0)
+            {
+                Death();
+                return;
+            }
+            PlayerMovement.instance.animator.SetTrigger("Hurt");
             isInvisible = true;
             StartCoroutine(InvicibilityFlash());
             StartCoroutine(HandleInvicibilityDelay());
         }
+    }
+
+    public void Death()
+    {
+        Debug.Log("MORT");
+        PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.animator.SetTrigger("Death");
+        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+        PlayerMovement.instance.playerCollider.enabled = false;
     }
 
     public IEnumerator InvicibilityFlash()

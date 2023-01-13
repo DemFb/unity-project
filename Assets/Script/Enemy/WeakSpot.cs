@@ -11,6 +11,8 @@ public class WeakSpot : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
+            Debug.Log("DIE DIE DIE");
+            // EnemyPatrol.instance.animator.SetTrigger("Die"); 
             Destroy(objectToDestroy);
         }
     }
