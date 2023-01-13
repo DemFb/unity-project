@@ -65,6 +65,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int resolutionIndex)
     {
+
+        resolutions = Screen.resolutions.Select(resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct().ToArray();
+        resolutionDropdown.ClearOptions();
+
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
