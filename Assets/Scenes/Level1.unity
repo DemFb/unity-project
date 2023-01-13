@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.50433147, g: 0.8730046, b: 0.90913475, a: 1}
+  m_IndirectSpecularColor: {r: 0.50433165, g: 0.8730046, b: 0.90913475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -345,10 +345,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2474787246554269989, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474787246554269989, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1225235288}
+    - target: {fileID: 2474787246554269989, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetResolution
+      objectReference: {fileID: 0}
     - target: {fileID: 2670605042771006956, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
       propertyPath: musicSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 932305459}
     - target: {fileID: 2670605042771006956, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
       propertyPath: soundSlidder
       value: 
@@ -693,7 +705,7 @@ MonoBehaviour:
   playlist:
   - {fileID: 8300000, guid: fb0b2477a65584dcbb6ac6cf0ff650e3, type: 3}
   audioSource: {fileID: 203359231}
-  soundEffectMixer: {fileID: 0}
+  soundEffectMixer: {fileID: -3989402606238222860, guid: 086b0cfe703d844bf80025da1df75f00, type: 2}
 --- !u!82 &203359231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40012,6 +40024,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927707594}
   m_CullTransparentMesh: 1
+--- !u!114 &932305459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5597866203424823970, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+  m_PrefabInstance: {fileID: 130311993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &935716417
 GameObject:
   m_ObjectHideFlags: 0
@@ -40134,6 +40157,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1225235287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6767401784353163609, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+  m_PrefabInstance: {fileID: 130311993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1225235288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2670605042771006956, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
+  m_PrefabInstance: {fileID: 130311993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225235287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818cd4b8525c5489f8d7ffb2cb9e0e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1287638490
 GameObject:
   m_ObjectHideFlags: 0
@@ -40280,7 +40319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 53135260}
-  settingsWindow: {fileID: 0}
+  settingsWindow: {fileID: 1225235287}
 --- !u!1001 &1427389232
 PrefabInstance:
   m_ObjectHideFlags: 0
