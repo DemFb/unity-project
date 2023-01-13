@@ -10,7 +10,8 @@ public class HealAdd : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerStats.Instance.AddHealth();
-            Destroy(gameObject);
+            GetComponent<Animator>().SetTrigger("GetItem");
+            Destroy(gameObject, 0.5f);
         }
     }
 }

@@ -10,7 +10,8 @@ public class PickUpObject : MonoBehaviour
         {
             AudioManager.instance.PlayClipAt(sound, transform.position);
             Inventory.instance.AddGems(1);
-            Destroy(gameObject);
+            GetComponent<Animator>().SetTrigger("GetItem");
+            Destroy(gameObject, 0.5f);
         }
     }
 

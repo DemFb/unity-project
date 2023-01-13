@@ -10,7 +10,8 @@ public class HealFill : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerStats.Instance.Heal(heal);
-            Destroy(gameObject);
+            GetComponent<Animator>().SetTrigger("GetItem"); 
+            Destroy(gameObject, 0.5f);
         }
     }
 }
