@@ -8,7 +8,20 @@ public class EnemyPatrol : MonoBehaviour
     public SpriteRenderer graphics;
     public Transform target;
     private int _destPoint = 0;
-    
+    public static EnemyPatrol instance;
+    public Animator animator;
+
+
+    /*private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance de Player Movement dans la scène");
+        }
+
+        instance = this;
+    }*/
+
     void Start() 
     {
         target = waypoints[0];

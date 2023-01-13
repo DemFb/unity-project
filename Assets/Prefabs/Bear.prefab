@@ -277,6 +277,7 @@ MonoBehaviour:
   - {fileID: 3250393154166078492}
   graphics: {fileID: 3250393154765294628}
   target: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!95 &3250393154765294634
 Animator:
   serializedVersion: 5

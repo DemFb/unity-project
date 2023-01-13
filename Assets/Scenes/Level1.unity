@@ -25366,18 +25366,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &1741589993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741589979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 139118043354a49b386bb73d58af8ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1752720962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26108,11 +26096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3250393154095576706, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.18
+      value: 5.19
       objectReference: {fileID: 0}
     - target: {fileID: 3250393154095576706, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.15
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: 3250393154095576706, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26151,13 +26139,25 @@ PrefabInstance:
       value: 0.37141848
       objectReference: {fileID: 0}
     - target: {fileID: 3250393154765294629, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5467756
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250393154765294629, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
       propertyPath: m_Offset.x
       value: 0.0133190155
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250393154765294629, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.016709924
       objectReference: {fileID: 0}
     - target: {fileID: 3250393154765294629, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3250393154765294635, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 591833177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545b1e428d7be4324b7267dc588fcd54, type: 3}
 --- !u!1001 &3797276198047852604
