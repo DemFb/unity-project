@@ -69,7 +69,6 @@ public class PlayerStats : MonoBehaviour
 
     public void Death()
     {
-        Debug.Log("MORT");
         PlayerMovement.instance.enabled = false;
         PlayerMovement.instance.animator.SetTrigger("Death");
         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;

@@ -11,5 +11,9 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.SmoothDamp(transform.position, player.transform.position + posOffset, ref velocity, timeOffset);
+        //if(PlayerMovement.instance.enabled == false)
+        {
+            //transform.position = Vector3.SmoothDamp(0f, player.transform.position + posOffset, ref velocity, timeOffset);
+        }
     }
 }
