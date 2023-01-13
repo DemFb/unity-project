@@ -13,7 +13,7 @@ public class WeakSpot : MonoBehaviour
         if (col.CompareTag("Player"))
         {
 
-            AudioManager.instance.PlayClipAt(killSound, transform.position);
+           /// AudioManager.instance.PlayClipAt(killSound, transform.position);
             Debug.Log("DIE DIE DIE");
             // EnemyPatrol.instance.animator.SetTrigger("Die"); 
             Destroy(objectToDestroy);

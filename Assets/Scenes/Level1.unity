@@ -636,7 +636,7 @@ MonoBehaviour:
   playlist:
   - {fileID: 8300000, guid: fb0b2477a65584dcbb6ac6cf0ff650e3, type: 3}
   audioSource: {fileID: 203359231}
-  soundEffectMixer: {fileID: -3989402606238222860, guid: 086b0cfe703d844bf80025da1df75f00, type: 2}
+  soundEffectMixer: {fileID: 0}
 --- !u!82 &203359231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26701,7 +26701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acacbfa4697e64ecaba96c30dfe06dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: ba718598edb59476e8c3d160e974be98, type: 3}
+  sound: {fileID: 0}
 --- !u!4 &882766396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7797263297472607404, guid: 7ac5c05abe63f45f4b4b12ee4a80c6e6, type: 3}
@@ -27196,7 +27196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 53135260}
-  settingsWindow: {fileID: 1682340971}
+  settingsWindow: {fileID: 0}
 --- !u!1001 &1427389232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27567,11 +27567,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ac5c05abe63f45f4b4b12ee4a80c6e6, type: 3}
---- !u!1 &1682340971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6767401784353163609, guid: fa52d0bd36a23477a88706ac26c8f1f5, type: 3}
-  m_PrefabInstance: {fileID: 130311993}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1752720962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29020,17 +29015,29 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3331119440743629229, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.69605124
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331119440743629229, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.14264989
+      objectReference: {fileID: 0}
+    - target: {fileID: 3742268593639266326, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.027
+      objectReference: {fileID: 0}
     - target: {fileID: 6234276073692764804, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6234276073692764804, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.57
+      value: 5.87
       objectReference: {fileID: 0}
     - target: {fileID: 6234276073692764804, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.02
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 6234276073692764804, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29067,6 +29074,22 @@ PrefabInstance:
     - target: {fileID: 6570397743032669118, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000803918746987389, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3961004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8000803918746987389, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.011693895
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084301366935024944, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2452309
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084301366935024944, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.16189015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e68b1523e1d244b485fadd19f7f414f, type: 3}
