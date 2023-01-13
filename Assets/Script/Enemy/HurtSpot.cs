@@ -8,6 +8,7 @@ public class HurtSpot : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             PlayerStats.Instance.TakeDamage(dmg);
+            PlayerMovement.instance.animator.SetTrigger("Hurt");
         }
         
     }
