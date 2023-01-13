@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -70,9 +71,10 @@ public class PlayerStats : MonoBehaviour
     public void Death()
     {
         PlayerMovement.instance.enabled = false;
-        PlayerMovement.instance.animator.SetTrigger("Death");
-        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Static;
         PlayerMovement.instance.playerCollider.enabled = false;
+        PlayerMovement.instance.animator.SetTrigger("Death");
+        StartCoroutine(ReturnMenu());
     }
 
     public IEnumerator InvicibilityFlash()
@@ -111,5 +113,11 @@ public class PlayerStats : MonoBehaviour
 
         if (onHealthChangedCallback != null)
             onHealthChangedCallback.Invoke();
+    }
+
+    IEnumerator ReturnMenu()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("MainMenu");
     }
 }
