@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,15 +15,31 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask collisionLayers;
+    public static PlayerMovement instance;
 
+    [SerializeField] private Transform center;
+    [SerializeField] private float knockBackVelocity = 8f;
+    [SerializeField] private bool knockBacked;
+    [SerializeField] private float knockBackTime;
     public Rigidbody2D rb;
+    public CapsuleCollider2D playerCollider;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
-
+    
     public AudioClip sound;
+    
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.Log("Il y a plus d'une instance de Player Movement dans la scène");
+        }
+
+        instance = this;
+    }
 
     void Update()
     {  
@@ -63,8 +82,15 @@ public class PlayerMovement : MonoBehaviour
 
     void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        if (!knockBacked)
+        {
+            Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        }
+        else
+        {
+            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0f, Time.deltaTime * 2), rb.velocity.y);
+        }
 
         if(isJumping)
         {
@@ -88,5 +114,19 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    public void KnockBack(Transform t)
+    {
+        Vector3 dir = center.position - t.position;
+        knockBacked = true;
+        rb.velocity = dir.normalized * knockBackVelocity;
+        StartCoroutine(UnKnockBack());
+    }
+
+    private IEnumerator UnKnockBack()
+    {
+        yield return new WaitForSeconds(knockBackTime);
+        knockBacked = false;
     }
 }
