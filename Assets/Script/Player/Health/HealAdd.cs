@@ -10,7 +10,7 @@ public class HealAdd : MonoBehaviour
         
         if(collision.CompareTag("Player"))
         {
-           // AudioManager.instance.PlayClipAt(sound, transform.position);
+            AudioManager.instance.PlayClipAt(sound, transform.position);
             PlayerStats.Instance.AddHealth();
             GetComponent<Animator>().SetTrigger("GetItem");
             Destroy(gameObject, 0.5f);
